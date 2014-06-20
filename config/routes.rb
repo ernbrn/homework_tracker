@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'login/index'
+
+  get 'welcome/index'
+
   resources :assignments
 
   resources :users
