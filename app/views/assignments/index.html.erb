@@ -6,7 +6,7 @@
       <th>Name</th>
       <th>Title</th>
       <th>Description</th>
-      <th>Assinged</th>
+      <th>Assigned</th>
       <th>Due date</th>
       <th>Completed</th>
       <th colspan="3"></th>
@@ -16,10 +16,10 @@
   <tbody>
     <% @assignments.each do |assignment| %>
       <tr>
-        <td><%= assignment.name %></td>
+        <td><%= assignment.user.name %></td>
         <td><%= assignment.title %></td>
         <td><%= assignment.description %></td>
-        <td><%= assignment.assinged %></td>
+        <td><%= assignment.assigned %></td>
         <td><%= assignment.due_date %></td>
         <td><%= assignment.completed %></td>
         <td><%= link_to 'Show', assignment %></td>

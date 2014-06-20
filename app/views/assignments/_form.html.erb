@@ -12,8 +12,9 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.collection_select :user_id, User.all, :id, :name %>  </div>
+    <%= f.label :user_id, "Student Name" %><br>
+    <%= f.collection_select :user_id, User.all, :id, :name %>
+    </div>
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -22,10 +23,7 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %>
   </div>
-  <div class="field">
-    <%= f.label :assinged %><br>
-    <%= f.datetime_select :assinged %>
-  </div>
+  
   <div class="field">
     <%= f.label :due_date %><br>
     <%= f.datetime_select :due_date %>

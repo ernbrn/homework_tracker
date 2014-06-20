@@ -11,6 +11,7 @@ class AssignmentsController < ApplicationController
   # GET /assignments/1
   # GET /assignments/1.json
   def show
+    @user = User.all
   end
 
   # GET /assignments/new
@@ -26,6 +27,7 @@ class AssignmentsController < ApplicationController
   # POST /assignments.json
   def create
     @assignment = Assignment.new(assignment_params)
+
 
     respond_to do |format|
       if @assignment.save
@@ -70,6 +72,6 @@ class AssignmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def assignment_params
-      params.require(:assignment).permit(:name, :title, :user_id, :description, :assinged, :due_date, :completed)
+      params.require(:assignment).permit(:name, :title, :description, :assigned, :due_date, :completed, :user_id)
     end
 end
