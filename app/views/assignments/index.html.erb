@@ -13,14 +13,31 @@
     </tr>
   </thead>
 
+
   <tbody>
-    <% @assignments.each do |assignment| %>
+    <% @assignments.order(due_date: :asc).each do |assignment| %>
       <tr>
         <td><%= assignment.user.name %></td>
         <td><%= assignment.title %></td>
-        <td><%= assignment.description %></td>
+        <td><%= markdown(assignment.description) %></td>
         <td><%= assignment.assigned %></td>
+
+        <% if assignment.due_date <= DateTime.now && assignment.completed == false %>
+        <% a = true %>
+        <% else %>
+        <% a = false %>
+        <% end %>
+
+
+        <% if a == true %>
+
+        <td id= "late"><%= assignment.due_date %></td>
+
+      <%else%>
         <td><%= assignment.due_date %></td>
+        <%end%>
+
+
         <td><%= assignment.completed %></td>
         <td><%= link_to 'Show', assignment %></td>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
@@ -30,6 +47,14 @@
   </tbody>
 </table>
 
+
+
+
+
+
 <br>
 
-<%= link_to 'New Assignment', new_assignment_path %>
+<%= link_to 'New Assignment  |  ', new_assignment_path %>
+
+<%= link_to "Users  |  ", users_path %>
+<%= link_to "Back Home", root_path %>
