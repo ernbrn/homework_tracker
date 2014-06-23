@@ -5,7 +5,7 @@ class Assignment < ActiveRecord::Base
 
   validates :due_date, presence: true
 
-  # validate :due_date_not_before_assigned
+  validate :due_date_not_before_assigned
   belongs_to :user
 
   def due_date_not_before_assigned
