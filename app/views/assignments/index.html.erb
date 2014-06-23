@@ -1,4 +1,6 @@
-<h1>Welcome</h1>
+<%provide(:title, 'Assignments') %>
+
+<h1>Welcome <%= yield(:current_user) %></h1>
 
 <table>
   <thead>
