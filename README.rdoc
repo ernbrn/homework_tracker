@@ -8,6 +8,6 @@ After that, start assigning some homework! Choose who you'd like to assign homew
 
 Some notes:
 * Due date must be after the current date (assignment date will be automagically generated)
-*Any assignments that are past due AND not marked as complete will turn red.
-
-== Have Fun
+* Any assignments that are past due AND not marked as complete will turn red.
+ 
+== Homework Track Away
