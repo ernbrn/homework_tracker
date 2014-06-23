@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Homework Tracker!
 
-Things you may want to cover:
+Login via the home page, or create a new user if needed.
 
-* Ruby version
+After that, start assigning some homework! Choose who you'd like to assign homework to (feel free to create a new user).
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Some notes:
+* Due date must be after the current date (assignment date will be automagically generated)
+* Any assignments that are past due AND not marked as complete will turn red.
+ 
+== Homework Track Away
