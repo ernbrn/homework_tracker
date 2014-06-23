@@ -30,5 +30,10 @@
   <%= @assignment.completed %>
 </p>
 
+<p>
+  <strong>Homework URL:</strong>
+  <%= @assignment.homework_url %>
+</p>
+
 <%= link_to 'Edit', edit_assignment_path(@assignment) %> |
 <%= link_to 'Back', assignments_path %>
