@@ -1,0 +1,27 @@
+<% provide(:title, "Sign in") %>
+<div class = "row">
+<div class = "large-3 columns">
+<h1> Sign in </h1>
+</div>
+</div>
+
+
+<div class = "row">
+  <div class = "large-6 columns">
+
+    <%= form_for(:session, url: sessions_path) do |f| %>
+
+    <%=f.label :name %>
+    <%=f.text_field :name %>
+
+    <%=f.label :password %>
+    <%=f.password_field :password %>
+
+    <%= f.submit "Sign in", class:"button [large]" %>
+    <%end%>
+
+
+   Psst! Do you need to  <%= link_to "Sign Up?", new_user_path %>
+
+</div>
+</div>
