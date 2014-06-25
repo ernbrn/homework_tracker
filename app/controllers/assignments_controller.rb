@@ -6,6 +6,7 @@ class AssignmentsController < ApplicationController
   def index
     @assignments = Assignment.all
     @user = User.all
+    @current_user = current_user
   end
 
   # GET /assignments/1
@@ -53,7 +54,7 @@ class AssignmentsController < ApplicationController
       end
     end
   end
-  
+
   # DELETE /assignments/1
   # DELETE /assignments/1.json
   def destroy

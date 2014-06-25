@@ -1,5 +1,7 @@
 <%provide(:title, 'Assignments') %>
 
+<h2>Welcome <%= @current_user.name %>!</h2>
+
 <h1>Create an assignment!</h1>
 
 <table>
@@ -41,11 +43,8 @@
         <td><%= assignment.due_date %></td>
         <%end%>
 
-         <td><%= assignment.completed %></td>
-         <td><%= assignment.homework_url %></td>
 
 
-        <td><%= link_to 'Logout', session_path %></td>
         <td><%= link_to 'Show', assignment %></td>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
         <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>

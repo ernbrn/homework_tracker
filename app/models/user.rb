@@ -2,10 +2,12 @@ class User < ActiveRecord::Base
   validates :name, presence: true
   before_create :create_remember_token
 
- has_secure_password
- validates :password, presence: true
+  has_secure_password
+  validates :password, presence: true
+
+
   has_many :assignments
-  belongs_to :welcome
+
   has_many :completes, :through => :assignments
 
 
