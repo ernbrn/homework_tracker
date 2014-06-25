@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
  validates :password, presence: true
   has_many :assignments
   belongs_to :welcome
+  has_many :completes, :through => :assignments
 
 
   def User.new_remember_token

@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+erin = User.create(name: "Erin")
+shopper = Assignment.create(title: "Backwards Shopper", description: "create hw tracker")
