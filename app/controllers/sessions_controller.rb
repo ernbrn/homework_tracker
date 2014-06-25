@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       @this_user = user.name
       redirect_to user_path(current_user), notice: "You have successfully logged in"
       else
-        flash[:notice => "Help"]
+        flash[:notice] = "Invalid Username/Password combination"
         render 'new'
     end
   end
