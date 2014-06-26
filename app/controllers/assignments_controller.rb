@@ -7,7 +7,6 @@ class AssignmentsController < ApplicationController
     @assignments = Assignment.all
     @user = User.all
     @current_user = current_user
-    @complete = Complete.all
   end
 
   # GET /assignments/1

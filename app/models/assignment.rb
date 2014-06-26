@@ -16,4 +16,12 @@ class Assignment < ActiveRecord::Base
     end
   end
 
+  def make_complete
+    self.assignment_complete = true
+  end
+
+  def make_incomplete
+    self.assignment_complete = false
+  end
+
 end
