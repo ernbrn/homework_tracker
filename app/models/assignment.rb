@@ -8,7 +8,7 @@ class Assignment < ActiveRecord::Base
   validate :due_date_not_before_assigned, :on => :create
 
   belongs_to :user
-  has_many :completes
+  has_one :complete
 
   def due_date_not_before_assigned
     if due_date < assigned

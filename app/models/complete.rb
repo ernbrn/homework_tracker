@@ -1,3 +1,10 @@
 class Complete < ActiveRecord::Base
-  belongs_to :assignment
+
+  def make_complete
+    self.assignment_completed  = true
+  end
+
+  def make_incomplete
+    self.assignment_completed  = false
+  end
 end

@@ -5,5 +5,57 @@
   <%= @user.name %>
 </p>
 
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Assigned</th>
+      <th>Due date</th>
+      <th>Completed</th>
+      <th>Homework URL</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+
+    <% @assignments.order(due_date: :asc).each do |assignment| %>
+      <tr>
+        <td><%= assignment.user.name %></td>
+        <td><%= assignment.title %></td>
+        <td><%= markdown(assignment.description) %></td>
+        <td><%= assignment.assigned %></td>
+
+        <% if assignment.due_date <= DateTime.now && assignment.completed == false %>
+        <% a = true %>
+        <% else %>
+        <% a = false %>
+        <% end %>
+
+
+        <% if a == true %>
+
+        <td id= "late"><%= assignment.due_date %></td>
+
+      <%else%>
+        <td><%= assignment.due_date %></td>
+         <%=link_to "Click here to complete", completes_path %>
+        <%end%>
+
+
+
+        <td><%= link_to 'Show', assignment %></td>
+        <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
+        <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', assignments_path %>

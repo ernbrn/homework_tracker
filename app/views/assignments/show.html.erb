@@ -27,12 +27,8 @@
 
 <p>
   <strong>Completed:</strong>
-  <%= @assignment.completed %>
-</p>
+   <%=link_to, "Click here to complete", completes_path %>
 
-<p>
-  <strong>Homework URL:</strong>
-  <%= @assignment.homework_url %>
 </p>
 
 <%= link_to 'Edit', edit_assignment_path(@assignment) %> |

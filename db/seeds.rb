@@ -12,6 +12,7 @@ henry = User.create(name: "Henry", password: "henry")
 bo = User.create(name: "Bo", password: "bo")
 parker = User.create(name: "Parker", password: "parker")
 
+this = Complete.create(assignment_completed: false)
 
 shopper = Assignment.create(title: "Backwards Shopper",
 assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create shopping list", user: erin)
@@ -29,4 +30,5 @@ twitter = Assignment.create(title: "Twitter",
 assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create twitter", user: henry)
 
 todo = Assignment.create(title: "ToDo List",
-assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create todo list", user: henry)
+assigned: DateTime.now, due_date: DateTime.now + 2.days,
+description: "create todo list", user: henry, complete: this)
