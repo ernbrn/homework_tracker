@@ -43,7 +43,10 @@
 
       <%else%>
         <td><%= assignment.due_date %></td>
-         <%=link_to "Click here to complete", completes_path %>
+        <td><%= assignment.assignment_complete %></td>
+        <td><%= assignment.homework_url %></td>
+
+
         <%end%>
 
 

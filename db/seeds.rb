@@ -14,19 +14,19 @@ parker = User.create(name: "Parker", password: "parker")
 
 
 shopper = Assignment.create(title: "Backwards Shopper",
-assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create shopping list", user: erin)
+assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create shopping list", user: erin, assignment_complete: true)
 
 shopper = Assignment.create(title: "Backwards Shopper",
-assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create shopping list", user: molly)
+assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create shopping list", user: molly, assignment_complete: true)
 
 shopper = Assignment.create(title: "Backwards Shopper",
-assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create shopping list", user: henry)
+assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create shopping list", user: henry, assignment_complete: false)
 
 hwtracker = Assignment.create(title: "Homework Tracker",
-assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create hw tracker", user: molly)
+assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create hw tracker", user: molly, assignment_complete: false)
 
 twitter = Assignment.create(title: "Twitter",
-assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create twitter", user: henry)
+assigned: DateTime.now, due_date: DateTime.now + 2.days, description: "create twitter", user: henry, assignment_complete: true)
 
 todo = Assignment.create(title: "ToDo List",
 assigned: DateTime.now, due_date: DateTime.now + 2.days,
