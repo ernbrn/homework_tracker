@@ -14,7 +14,7 @@
  *= require_self
  */
 
- .button{
+ .button-group{
    position: relative;
    float: right;
  }

@@ -1,8 +1,7 @@
 <%provide(:title, 'Assignments') %>
-
+<%if signed_in? == true %>
 <h2>Welcome <%= @current_user.name %>!</h2>
-
-<h1>Create an assignment!</h1>
+<%end%>
 
 <table>
   <thead>
@@ -45,8 +44,10 @@
 
 
         <td><%= link_to 'Show', assignment %></td>
+        <%if signed_in? == true %>
         <td><%= link_to 'Edit', edit_assignment_path(assignment) %></td>
         <td><%= link_to 'Destroy', assignment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         <%end%>
       </tr>
     <% end %>
   </tbody>
@@ -55,8 +56,3 @@
 
 
 <br>
-
-<%= link_to 'New Assignment  |  ', new_assignment_path %>
-
-<%= link_to "Users  |  ", users_path %>
-<%= link_to "Back Home", root_path %>

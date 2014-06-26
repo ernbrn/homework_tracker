@@ -7,9 +7,15 @@
   <div class="alert-box info radius"><%=flash[:error] %></div>
 <% end %>
 
- <%if signed_in? == true %>
-<%= link_to 'Sign Out!', signout_path,  method: 'delete', class: "button"%>
+<ul class = "button-group">
+  <li><%=link_to "Students", users_path, class: "button success "%></li>
+  <li><%=link_to "All Assignments", assignments_path, class: "button success"%></li>
+  <%if signed_in? == true %>
+  <li><%=link_to "Your Assignments", user_path(current_user), class: "button success"%></li>
+  <li><%= link_to 'Sign Out!', signout_path,  method: 'delete', class: "button alert"%></li>
 <%end%>
+
+</ul>
 
 
 
