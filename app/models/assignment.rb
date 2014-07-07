@@ -3,6 +3,8 @@ class Assignment < ActiveRecord::Base
     self.assigned = DateTime.now
   end
 
+
+
   validates :due_date, presence: true
 
   validate :due_date_not_before_assigned, :on => :create
