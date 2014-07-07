@@ -1,0 +1,10 @@
+<%=form_for(@assignment) do |f|%>
+<div class="field">
+  <%= f.label :assignment_complete %><br>
+  <%= f.check_box :assignment_complete %>
+</div>
+
+<div class="actions">
+  <%= f.submit %>
+</div>
+<%end%>

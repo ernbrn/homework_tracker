@@ -18,6 +18,10 @@ class AssignmentsController < ApplicationController
   # GET /assignments/new
   def new
     @assignment = Assignment.new
+    respond_to do |format|
+      format.html
+      format.js
+    end
   end
 
   # GET /assignments/1/edit
@@ -34,9 +38,11 @@ class AssignmentsController < ApplicationController
       if @assignment.save
         format.html { redirect_to @assignment, notice: 'Assignment was successfully created.' }
         format.json { render :show, status: :created, location: @assignment }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @assignment.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
